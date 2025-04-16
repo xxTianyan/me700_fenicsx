@@ -1,6 +1,6 @@
 # Linear Elastic Cantilever Beam Simulation (FEniCSx)
 
-The example simulates the static deformation of a 3D cantilever beam under gravity using **linear elasticity theory** and finite element discretization via **FEniCSx**.
+This project simulates the static deformation of a 3D cantilever beam under gravity using **linear elasticity theory** and finite element discretization via **FEniCSx**.
 
 ---
 
@@ -50,7 +50,7 @@ where:
 
 ---
 
-## 🧩 Variational Formulation
+## 🧩 Weak Formulation
 
 The weak form of the equilibrium equation is:
 
@@ -71,51 +71,13 @@ L(\\mathbf{v}) = \int_\\Omega \mathbf{f} \cdot \mathbf{v} \, d\\Omega
 
 ---
 
-## 🔢 Numerical Method
-
-- **Finite Element Space**: First-order vector-valued Lagrange elements (P1)
-- **Discretization**: The beam is meshed using hexahedral elements (\(20 \times 6 \times 6\) grid)
-- **Solver**: Direct LU solver (`petsc` with `pc_type=lu`)
-
----
-
-## 📈 Output & Visualization
-
-After solving the system, we evaluate the vertical displacement \( u_z \) along the beam’s centerline at \( y = z = 0.1 \). A line plot of deflection vs length is saved as `result.png`.
-
----
-
-## ⚙️ Parameters Used
-
-| Parameter     | Symbol     | Value       |
-|---------------|------------|-------------|
-| Beam Length   | \( L \)    | 1.0 m       |
-| Width/Height  | \( W \)    | 0.2 m       |
-| Density       | \( \\rho \) | 1.0 kg/m³   |
-| Gravity Scale | \( g \)    | \( 0.4 (W/L)^2 \) |
-| Lamé \(\mu\)  | \( \mu \)  | 1.0         |
-| Lamé \(\\lambda\) | \( \\lambda \) | 1.25 |
-
----
-
-## 🧠 Interpretation
+## 🚗 Interpretation
 
 The beam bends downward under its own weight. The maximum deflection is expected at the **free end**, and the displacement field is smooth and continuous due to the clamped constraint and linear elasticity assumption.
 
 This setup is often used as a **benchmark problem** in solid mechanics and computational methods due to its simplicity and clear expected behavior.
 
----
-
-## 📎 References
-
-- Bathe, K. J. (1996). *Finite Element Procedures*.
-- Belytschko, T. et al. (2013). *Nonlinear Finite Elements for Continua and Structures*.
-- FEniCSx Documentation: https://docs.fenicsproject.org/dolfinx/
-
----
-
 ## 📂 Files
 
 - `beam_simulation.py` – Main script solving the elasticity problem
 - `result.png` – Plot of z-displacement along the beam
-
