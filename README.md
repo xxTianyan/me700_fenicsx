@@ -8,15 +8,15 @@ This project simulates the static deformation of a 3D cantilever beam under grav
 
 We consider a rectangular beam of length \( L \), width and height \( W \), fixed (clamped) at one end, and subject to a body force representing gravity:
 
-- Domain: $ \Omega = [0, L] \times [0, W] \times [0, W] $
+- Domain: $\Omega = [0, L] \times [0, W] \times [0, W]$
 - Boundary conditions:
-  - **Clamped** at $ x = 0 :  \mathbf{u} = \mathbf{0} $
+  - **Clamped** at $x = 0 :  \mathbf{u} = \mathbf{0}$
   - **Free** elsewhere (no traction)
 - Body force:
 
 $$ \mathbf{f} = \begin{bmatrix} 0 \\\\ 0 \\\\ -\\rho g \end{bmatrix} $$
 
-where $ \rho $ is the density and $ g $ is a gravity-like scaling constant.
+where $\rho$ is the density and $ g $ is a gravity-like scaling constant.
 
 ---
 
@@ -44,9 +44,9 @@ $$
 
 where:
 
-- \( \mathbf{u} \): displacement vector
-- \( \boldsymbol{\sigma} \): Cauchy stress tensor
-- \( \\lambda \), \( \mu \): Lamé parameters (material constants)
+- $\mathbf{u}$: displacement vector
+- $\boldsymbol{\sigma}$: Cauchy stress tensor
+- $\\lambda, \mu$: Lamé parameters (material constants)
 
 ---
 
