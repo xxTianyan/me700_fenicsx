@@ -16,7 +16,7 @@ We consider a rectangular beam of length \( L \), width and height \( W \), fixe
 
 $$ \mathbf{f} = \begin{bmatrix} 0 \\\\ 0 \\\\ -\\rho g \end{bmatrix} $$
 
-where $\rho$ is the density and $ g $ is a gravity-like scaling constant.
+where $\rho$ is the density and $g$ is a gravity-like scaling constant.
 
 ---
 
